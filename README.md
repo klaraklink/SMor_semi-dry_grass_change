@@ -15,7 +15,7 @@ The header data structure follows that of the ReSurveyEurope Database (http://eu
 
 The data on species composition and environmental variables are provided in two formats:
 
-*	Turboveg 2 database (see https://www.synbiosys.alterra.nl/turboveg/) – file `TurbovegDbBackup_Cz_0019_47.zip`. For using this dataset in Turboveg, the database dictionary (`TurbovegDdBackup_Default_dictionary.zip`) and the species list (`TurbovegSlBackup_Czechia_slovakia_2015.zip`) must be installed.
+*	Turboveg 2 database (see https://www.synbiosys.alterra.nl/turboveg/) `TurbovegDbBackup_Cz_0019_47.zip` (https://euroveg.org/resurvey_metadata/CZ_0019_047.pdf). For using this dataset in Turboveg, the database dictionary (`TurbovegDdBackup_Default_dictionary.zip`) and the species list (`TurbovegSlBackup_Czechia_slovakia_2015.zip`) must be installed.
 
 *	Three CSV files with columns separated by commas:
    *	`Klinkovska_et_al_basiphilous_grasslands_S_Moravia_species.csv` contains the percentage covers of plant species in the plots, which are mid-values for cover-abundance categories of the seven-grade Braun-Blanquet scale. Plant nomenclature was harmonised according to Danihelka et al. (2012).
