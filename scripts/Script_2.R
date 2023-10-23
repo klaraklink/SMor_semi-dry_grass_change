@@ -87,7 +87,7 @@ ggsave("plots/Fig_3_ordination.png", width = 10, height = 5)
 
 # constrained ordination --------------------------------------------------
 
-dord <- capscale(spe ~ head$Rs_observ, distance = "bray", sqrt.dist = T)
+dord <- capscale(spe ~ head$Rs_observ+Condition(head$Rs_plot), distance = "bray", sqrt.dist = T)
 
 # significance test
 anova(dord, permutations=how(blocks=as.factor(head$Rs_plot), nperm=999))
