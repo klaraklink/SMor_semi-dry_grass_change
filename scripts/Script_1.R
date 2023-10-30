@@ -1,5 +1,5 @@
 #' Supplementary code to the article:
-#' Klinkovska K, Sperandii MG, Trávníček B, Chytrý M (2023). 
+#' Klinkovska K, Sperandii MG, Travnicek B, Chytry M (2023). 
 #' Significant decline in habitat specialists in semi-dry grasslands over four decades. 
 #' Biodiversity and Conservation.
 #' 
