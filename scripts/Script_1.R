@@ -1,5 +1,5 @@
 #' Supplementary code to the article:
-#' Klinkovska K, Sperandii MG, Trávníček B, Chytrý M (2023). 
+#' Klinkovska K, Sperandii MG, Travnicek B, Chytry M (2023). 
 #' Significant decline in habitat specialists in semi-dry grasslands over four decades. 
 #' Biodiversity and Conservation.
 #' 
@@ -23,13 +23,13 @@ library(tidyverse) # version 2.0.0
 # import data ------------------------------------------------------------
 
 # species data + species characteristics
-spe.traits <- read_csv("data/Klinkovska_et_al_basiphilous_grasslands_S_Moravia_species.csv") %>%
+spe.traits <- read_csv("data/Klinkovska_et_al_semi_dry_grasslands_S_Moravia_species.csv") %>%
   pivot_longer(cols = -Releve_number, values_to = "cover_perc", names_to = "SpecName_Layer") %>% 
   filter(cover_perc > 0) %>% 
-  left_join(read_csv("data/Klinkovska_et_al_basiphilous_grasslands_S_Moravia_species_data.csv"))
+  left_join(read_csv("data/Klinkovska_et_al_semi_dry_grasslands_S_Moravia_species_data.csv"))
 
 # header data + calculate species richness, number of alien species etc.
-head <- read_csv("data/Klinkovska_et_al_basiphilous_grasslands_S_Moravia_head.csv") %>% 
+head <- read_csv("data/Klinkovska_et_al_semi_dry_grasslands_S_Moravia_head.csv") %>% 
   left_join(spe.traits %>% group_by(Releve_number) %>% count(name = "spe.nr")) %>% 
   left_join(spe.traits %>% filter(!is.na(alien)) %>% group_by(Releve_number) %>% count(name = "alien.nr")) %>% 
   left_join(spe.traits %>% filter(str_detect(conserv_stat, "CR|VU|EN")) %>% group_by(Releve_number) %>% count(name = "end.nr")) %>% 

@@ -1,5 +1,5 @@
 #' Supplementary code to the article:
-#' Klinkovska K, Sperandii MG, Trávníček B, Chytrý M (2023). 
+#' Klinkovska K, Sperandii MG, Travnicek B, Chytry M (2023). 
 #' Significant decline in habitat specialists in semi-dry grasslands over four decades. 
 #' Biodiversity and Conservation.
 #' 
@@ -18,16 +18,16 @@ library(tidyverse) # version 2.0.0
 #' tibble v. 3.2.1
 
 # species data + square-root transformation
-spe <- read_csv("data/Klinkovska_et_al_basiphilous_grasslands_S_Moravia_species.csv") %>% 
+spe <- read_csv("data/Klinkovska_et_al_semi_dry_grasslands_S_Moravia_species.csv") %>% 
   select(-Releve_number) %>% 
   sqrt()
 
 # species characteristics
-spe.traits <- read_csv("data/Klinkovska_et_al_basiphilous_grasslands_S_Moravia_species_data.csv") %>% 
+spe.traits <- read_csv("data/Klinkovska_et_al_semi_dry_grasslands_S_Moravia_species_data.csv") %>% 
   mutate(across(c(starts_with("Ellenberg"), starts_with("dist")), ~as.numeric(.)))
 
 # header data 
-head <- read_csv("data/Klinkovska_et_al_basiphilous_grasslands_S_Moravia_head.csv")  
+head <- read_csv("data/Klinkovska_et_al_semi_dry_grasslands_S_Moravia_head.csv")  
 
 # unconstrained ordination ------------------------------------------------
 
@@ -69,7 +69,7 @@ spe.pcoa <- scores(spe.fit.pcoa, "vectors") %>%
          short_name = str_c(str_split_i(species, "\\s", 1) %>% str_sub(., 1, 3), 
                             str_split_i(species, "\\s", 2) %>% str_sub(., 1, 3), sep = "."))
 
-# ordination plot with
+# ordination plot with species
 plot1.spe <- spe.pcoa %>% 
   filter(p < 0.05) %>% 
   slice_max(r, n = 80) %>% 

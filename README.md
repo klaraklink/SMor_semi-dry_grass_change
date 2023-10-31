@@ -1,7 +1,7 @@
 # Klinkovská et al. (2023) Biodiversity and Conservation: Significant decline in habitat specialists in semi-dry grasslands over four decades
 
 ## Supplementary code and data to the article:
-Klinkovská K., Sperandii M. G., Trávníček B. & Chytrý M. (2023) Significant decline in habitat specialists in semi-dry grasslands over four decades. Biodiversity and Conservation.
+Klinkovská K., Sperandii M. G., Trávníček B. & Chytrý M. (2023) Significant decline in habitat specialists in semi-dry grasslands over four decades. Biodiversity and Conservation. https://doi.org/10.1007/s10531-023-02740-6
 
 ### Data
 
@@ -18,9 +18,9 @@ The data on species composition and environmental variables are provided in two 
 *	Turboveg 2 database (see https://www.synbiosys.alterra.nl/turboveg/) `TurbovegDbBackup_Cz_0019_47.zip` (https://euroveg.org/resurvey_metadata/CZ_0019_047.pdf). For using this dataset in Turboveg, the database dictionary (`TurbovegDdBackup_Default_dictionary.zip`) and the species list (`TurbovegSlBackup_Czechia_slovakia_2015.zip`) must be installed.
 
 *	Three CSV files with columns separated by commas:
-   *	`Klinkovska_et_al_basiphilous_grasslands_S_Moravia_species.csv` contains the percentage covers of plant species in the plots, which are mid-values for cover-abundance categories of the seven-grade Braun-Blanquet scale. Plant nomenclature was harmonised according to Danihelka et al. (2012).
-   *	`Klinkovska_et_al_basiphilous_grasslands_S_Moravia_species_data.csv` contains ecological indicator values and information on the Red List status (Grulich 2017), alien species (Pyšek et al. 2022) and species diagnostic for the alliances Cirsio-Brachypodion pinnati and Bromion erecti (Chytrý et al. 2007).
-   *	`Klinkovska_et_al_basiphilous_grasslands_S_Moravia_head.csv` contains header data for the vegetation plots.
+   *	`Klinkovska_et_al_semi_dry_grasslands_S_Moravia_species.csv` contains the percentage covers of plant species in the plots, which are mid-values for cover-abundance categories of the seven-grade Braun-Blanquet scale. Plant nomenclature was harmonised according to Danihelka et al. (2012).
+   *	`Klinkovska_et_al_semi_dry_grasslands_S_Moravia_species_data.csv` contains ecological indicator values and information on the Red List status (Grulich 2017), alien species (Pyšek et al. 2022) and species diagnostic for the alliances Cirsio-Brachypodion pinnati and Bromion erecti (Chytrý et al. 2007).
+   *	`Klinkovska_et_al_semi_dry_grasslands_S_Moravia_head.csv` contains header data for the vegetation plots.
 
 These data are also stored in the Czech National Phytosociological Database (Chytrý & Rafajová 2003; https://botzool.cz/vegsci/phytosociologicalDb) and the ReSurveyEurope database (Knollová et al. 2023; http://euroveg.org/eva-database-re-survey-europe).
 

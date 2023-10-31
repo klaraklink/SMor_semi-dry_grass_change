@@ -1,5 +1,5 @@
 #' Supplementary code to the article:
-#' Klinkovska K, Sperandii MG, Trávníček B, Chytrý M (2023). 
+#' Klinkovska K, Sperandii MG, Travnicek B, Chytry M (2023). 
 #' Significant decline in habitat specialists in semi-dry grasslands over four decades. 
 #' Biodiversity and Conservation.
 #' 
@@ -15,13 +15,13 @@ library (tidyverse) # version 2.0.0
 # import data -------------------------------------------------------------
 
 # header data 
-head <- read_csv("data/Klinkovska_et_al_basiphilous_grasslands_S_Moravia_head.csv") 
+head <- read_csv("data/Klinkovska_et_al_semi_dry_grasslands_S_Moravia_head.csv") 
 
 head80 <- head %>% filter(Rs_observ == "1980")
 head22 <- head %>% filter(Rs_observ == "2022")
 
 # species data + square-root transformation
-spe <- read_csv("data/Klinkovska_et_al_basiphilous_grasslands_S_Moravia_species.csv") 
+spe <- read_csv("data/Klinkovska_et_al_semi_dry_grasslands_S_Moravia_species.csv") 
 
 spe80 <- spe %>% semi_join(head80) %>% sqrt() %>% select(-Releve_number) %>% as.data.frame()
 spe22 <- spe %>% semi_join(head22) %>% sqrt() %>% select(-Releve_number) %>% as.data.frame()
