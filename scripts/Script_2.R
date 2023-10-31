@@ -69,7 +69,7 @@ spe.pcoa <- scores(spe.fit.pcoa, "vectors") %>%
          short_name = str_c(str_split_i(species, "\\s", 1) %>% str_sub(., 1, 3), 
                             str_split_i(species, "\\s", 2) %>% str_sub(., 1, 3), sep = "."))
 
-# ordination plot with
+# ordination plot with species
 plot1.spe <- spe.pcoa %>% 
   filter(p < 0.05) %>% 
   slice_max(r, n = 80) %>% 
