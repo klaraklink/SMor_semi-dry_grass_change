@@ -97,7 +97,7 @@ dord.spe <- envfit(dord, spe, choices = 1,
                     permutations = how(blocks=as.factor(head$Rs_plot), nperm=999), display="lc")
 
 sig.spe <- as_tibble(dord.spe$vectors$arrows, rownames = "species") %>% 
-  bind_cols(p = dord.spe$vectors$pvals, r = dord.spe$vectors$r) %>% 
+  bind_cols(p = dord.spe$vectors$pvals, r = dord.spe$vectors$r)  %>%  
   filter(p < 0.05) %>% 
   arrange(CAP1, p)
 
