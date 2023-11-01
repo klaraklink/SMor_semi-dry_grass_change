@@ -53,22 +53,19 @@ plot1 <- head.ord %>%
         plot.title = element_text(size = 11))+
   geom_path(aes(MDS1, MDS2, group=Rs_plot), arrow = arrow(length=unit(0.3, "cm"))) +
   ggtitle("(a) 1980s-2022, PCoA, sites")+
-  labs(x="Axis 1", y="Axis 2")
+  labs(x="PCo1 (8.8%)", y="PCo2 (6.4%)")
 
 # ordinations with species unconstrained ----------------------------------
 
 # scores for species
-spe.fit.pcoa <- envfit(pcoa, spe[colSums(spe!=0)>5]) 
+spe.fit.pcoa <- envfit(pcoa, spe, scaling = 'sp', correlation = T)          
 
-spe.pcoa <- scores(spe.fit.pcoa, "vectors") %>%
-  as_tibble(rownames = "species") %>% 
-  mutate(MDS1=MDS1*3, 
-         MDS2=MDS2*3,
-         p = spe.fit.pcoa$vectors$pvals, 
-         r = spe.fit.pcoa$vectors$r, 
+spe.pcoa <- scores(pcoa, display = "species", choices = 1:2, scaling = "sp", correlation = T) %>%
+  as_tibble(rownames = 'species') %>% 
+  mutate(r = spe.fit.pcoa$vectors$r, p = spe.fit.pcoa$vectors$pvals,
          short_name = str_c(str_split_i(species, "\\s", 1) %>% str_sub(., 1, 3), 
                             str_split_i(species, "\\s", 2) %>% str_sub(., 1, 3), sep = "."))
-
+  
 # ordination plot with species
 plot1.spe <- spe.pcoa %>% 
   filter(p < 0.05) %>% 
@@ -79,7 +76,7 @@ plot1.spe <- spe.pcoa %>%
   theme_bw()+
   theme(plot.title = element_text(size=11))+
   ggtitle("(b) 1980s-2022, PCoA, species")+
-  labs(x="Axis1", y="Axis2")
+  labs(x="PCo1 (8.8%)", y="PCo2 (6.4%)")
 
 # bind together ordination plots for sites and species
 plot1 + plot1.spe
