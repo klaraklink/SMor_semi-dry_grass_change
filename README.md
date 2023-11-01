@@ -3,6 +3,8 @@
 ## Supplementary code and data to the article:
 Klinkovská K., Sperandii M. G., Trávníček B. & Chytrý M. (2023) Significant decline in habitat specialists in semi-dry grasslands over four decades. Biodiversity and Conservation. https://doi.org/10.1007/s10531-023-02740-6
 
+[![DOI](https://zenodo.org/badge/706733479.svg)](https://zenodo.org/doi/10.5281/zenodo.10060597)
+
 ### Data
 
 The data contain plant species composition data from resurveyed vegetation plots in the Central Moravian Carpathians (Czech Republic, 49°06’04’’–49°13’31’’N, 16°56’58’’–17°20’47’’E). The dataset comprises 90 vegetation plots first surveyed in 1985 and 1986 by Bohumil Trávníček (Trávníček 1987), and resurveyed in 2022 by Klára Klinkovská. Of these, 40 were inside protected areas and 50 were outside. To locate the historical plots as accurately as possible, a description of the location of each plot was used along with information on slope, aspect, elevation, and dominant species. In 2022, the geographical coordinates of each plot were measured using GPS with a location uncertainty of 3–5 m. All plots were squares of 16 m2. 
