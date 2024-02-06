@@ -1,7 +1,7 @@
 # Klinkovská et al. (2023) Biodiversity and Conservation: Significant decline in habitat specialists in semi-dry grasslands over four decades
 
 ## Supplementary code and data to the article:
-Klinkovská K., Sperandii M. G., Trávníček B. & Chytrý M. (2023) Significant decline in habitat specialists in semi-dry grasslands over four decades. Biodiversity and Conservation. https://doi.org/10.1007/s10531-023-02740-6
+Klinkovská K., Sperandii M. G., Trávníček B. & Chytrý M. (2023) Significant decline in habitat specialists in semi-dry grasslands over four decades. Biodiversity and Conservation, 33, 161–178. https://doi.org/10.1007/s10531-023-02740-6
 
 [![DOI](https://zenodo.org/badge/706733479.svg)](https://zenodo.org/doi/10.5281/zenodo.10060597)
 
